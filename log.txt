@@ -1,0 +1,22 @@
+$ ./runTest.sh
+time="2025-02-09T00:31:10+01:00" level=warning msg="C:\\Users\\ricci\\Downloads\\technical-test\\task-php-legacy_class_test\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2025-02-09T00:31:10+01:00" level=warning msg="Found orphan containers ([task-php-legacy_class_test-composer-run-68e9691fe82d task-php-legacy_class_test-composer-run-ac42d51cc3c7 task-php-legacy_class_test-composer-run-8275f91eedc2 task-php-legacy_class_test-composer-run-b0d0c71940d0]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+
+
+An error occurred inside PHPUnit.
+
+Message:  Class "PHPUnit\Metadata\Api\Requirements" not found
+Location: /app/vendor/phpunit/phpunit/src/Framework/TestBuilder.php:285
+
+#0 /app/vendor/phpunit/phpunit/src/Framework/TestBuilder.php(46): PHPUnit\Framework\TestBuilder->requirementsSatisfied('MyTest', 'testCircleArea')
+#1 /app/vendor/phpunit/phpunit/src/Framework/TestSuite.php(508): PHPUnit\Framework\TestBuilder->build(Object(ReflectionClass), 'testCircleArea', Array)
+#2 /app/vendor/phpunit/phpunit/src/Framework/TestSuite.php(109): PHPUnit\Framework\TestSuite->addTestMethod(Object(ReflectionClass), Object(ReflectionMethod), Array)
+#3 /app/vendor/phpunit/phpunit/src/Framework/TestSuite.php(209): PHPUnit\Framework\TestSuite::fromClassReflector(Object(ReflectionClass), Array)
+#4 /app/vendor/phpunit/phpunit/src/Framework/TestSuite.php(230): PHPUnit\Framework\TestSuite->addTestSuite(Object(ReflectionClass), Array)
+#5 /app/vendor/phpunit/phpunit/src/TextUI/Configuration/Xml/TestSuiteMapper.php(105): PHPUnit\Framework\TestSuite->addTestFile('/app/tests/MyTe...', Array)
+#6 /app/vendor/phpunit/phpunit/src/TextUI/Configuration/TestSuiteBuilder.php(75): PHPUnit\TextUI\XmlConfiguration\TestSuiteMapper->map('/app/phpunit.xm...', Object(PHPUnit\TextUI\Configuration\TestSuiteCollection), '', '')
+#7 /app/vendor/phpunit/phpunit/src/TextUI/Application.php(418): PHPUnit\TextUI\Configuration\TestSuiteBuilder->build(Object(PHPUnit\TextUI\Configuration\Configuration))
+#8 /app/vendor/phpunit/phpunit/src/TextUI/Application.php(181): PHPUnit\TextUI\Application->buildTestSuite(Object(PHPUnit\TextUI\Configuration\Configuration))
+#9 /app/vendor/phpunit/phpunit/phpunit(104): PHPUnit\TextUI\Application->run(Array)
+#10 /app/vendor/bin/phpunit(122): include('/app/vendor/php...')
+#11 {main}
